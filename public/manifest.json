@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "manifest_version": 3,
+  "name": "Mostafa's Chat Extension",
+  "short_name": "Mostafa_Chat_Extension",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

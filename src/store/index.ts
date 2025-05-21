@@ -15,9 +15,10 @@ interface MessageStore {
 
 export const useMessageStore = create<MessageStore>()((set) => {
   return {
-    messages: [],
+    messages: localStorage.getItem('messages') ? JSON.parse(localStorage.getItem('messages') || '') : [],
     addMessage: (message: Message) => {
       set((state) => {
+        localStorage.setItem('messages', JSON.stringify([...state.messages, message]));
         return {
           messages: [...state.messages, message],
         }

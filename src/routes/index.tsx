@@ -4,9 +4,12 @@ import InputPane from '@/components/InputPane'
 
 export const Route = createFileRoute('/')({
   component: App,
+    notFoundComponent: () => {
+    return App
+  },
 })
 
-function App() {
+export function App() {
   return (
     <>
       <ContentPane />
